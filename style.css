@@ -2,47 +2,53 @@
   margin: 0;
   padding: 0;
 }
-.nav-link{
-  position:relative;
-  margin-right:20px;
+.nav-link {
+  position: relative;
+  margin-right: 20px;
 }
-.nav-link::after{
-  content:"";
-  height:3px;
-  width:0;
+.nav-link::after {
+  content: "";
+  height: 3px;
+  width: 0;
   background-color: #915edf;
-  position:absolute;
-  bottom:0;
-  left:0;
-  transition:0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
 }
-.nav-link:hover::after{
-  width:100%;
+.nav-link:hover::after {
+  width: 100%;
 }
 .fb {
   background-image: url("https://img.freepik.com/free-photo/cup-coffee-with-laptop-cell-phone-diary-with-pen-white-background_23-2147924063.jpg?w=2000");
-  width: 100%;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.fbrow {
+  justify-content: center;
+  gap: 30px;
 }
 .fbLeft {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   gap: 25px;
+  padding: 30px 0;
 }
 .fbBtn {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .playBtn:hover {
   cursor: pointer;
-  color:#915edf
+  color: #915edf;
 }
 .fa-circle-play {
   font-size: 30px;
@@ -76,12 +82,13 @@
   font-size: 90%;
 }
 .fbFoot {
-  height: 150px;
+  height: fit-content;
   background-color: #915edf;
   padding: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .sb {
   margin: 80px 0;
@@ -98,9 +105,9 @@
   align-items: center;
 }
 .sdmidAct {
-  color:white;
+  color: white;
   font-size: 30px;
-  padding:10px;
+  padding: 10px;
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -122,19 +129,19 @@
   gap: 20px;
   text-align: center;
 }
-.spanRound{
-  display:flex;
-  gap:20px;
+.spanRound {
+  display: flex;
+  gap: 20px;
 }
-.span{
-  height:30px;
-  width:30px;
+.span {
+  height: 30px;
+  width: 30px;
   font-size: 18px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#fff;
+  color: #fff;
   font-weight: 600;
 }
 .tbFoot {
@@ -146,25 +153,48 @@
 .fourb {
   padding: 80px 0;
 }
+.imgZoom {
+  height: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
 .fourbImg {
   height: 150px;
   width: 150px;
   object-fit: cover;
   align-self: center;
   border-radius: 50%;
+  transition: 0.5s;
+}
+.fourbImg:hover {
+  height: 170px;
+  width: 170px;
 }
 .fourFoot {
   background-color: #f6f6f6;
 }
-/* .fourFootImg{
-  border:2px solid red;
-
+.workDes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  color: #fff;
+  background-color: #915edf;
 }
-.fourFootImg:hover{
-  position:relative;
-  cursor:pointer;
-  backdrop-filter:blur;
-} */
+.workDes:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.column {
+  padding: 0 !important;
+}
 .footer {
   padding: 30px 0;
   background-color: #2b2b2b;
@@ -174,12 +204,15 @@ ul li {
   list-style: none;
   cursor: pointer;
 }
-ul li:hover{
-  color:white;
+ul li:hover {
+  color: white;
 }
-.tweet:hover{
+.twitter {
+  margin-left: 1.3em;
+}
+.tweet:hover {
   text-decoration: underline;
-  color:#32cbff;
+  color: #32cbff;
 }
 .twitter ul li:before {
   content: "\f099";
@@ -189,6 +222,5 @@ ul li:hover{
 }
 .instagram .col {
   margin-bottom: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
-
